@@ -26,8 +26,10 @@ function initializeEventListeners() {
     const downloadButtons = document.querySelectorAll('.btn-primary, .download-btn, .cta-btn-primary');
     downloadButtons.forEach(btn => {
         btn.addEventListener('click', function(e) {
-            if (this.href === '#') {
-                e.preventDefault();
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            // Check if it's a download button (has href="#" or is a button element)
+            if (!href || href === '#' || this.tagName === 'BUTTON') {
                 handleDownloadAPK();
             }
         });
@@ -37,8 +39,10 @@ function initializeEventListeners() {
     const demoButtons = document.querySelectorAll('.btn-secondary');
     demoButtons.forEach(btn => {
         btn.addEventListener('click', function(e) {
-            if (this.href === '#') {
-                e.preventDefault();
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            // Check if it's a demo button (has href="#" or is a button element)
+            if (!href || href === '#' || this.tagName === 'BUTTON') {
                 handleWatchDemo();
             }
         });
@@ -89,20 +93,17 @@ function handleDownloadAPK() {
     const userConfirmed = confirm('Download EasyTrip Planner APK?\n\nFile size: ~25MB\nVersion: 1.0');
     
     if (userConfirmed) {
-        // Create a temporary link element
-        const link = document.createElement('a');
-        link.href = 'downloads/app-debug.apk';
-        link.download = 'app-debug.apk';
+        // Google Drive direct download link
+        const downloadUrl = 'https://drive.google.com/uc?export=download&id=1EzCXcLmQRUxRdT_M-8GEzYRJ0j_RX8Ch';
         
-        // Append to body, click, and remove
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // Open in new window/tab to trigger download
+        // Google Drive links work better when opened directly
+        window.open(downloadUrl, '_blank');
         
         // Optional: Show thank you message
         setTimeout(() => {
             alert('Thank you for downloading EasyTrip Planner!\n\nInstallation tips:\n1. Enable "Unknown Sources" in your Android settings\n2. Open the downloaded APK file\n3. Follow installation prompts');
-        }, 500);
+        }, 1000);
         
         // Optional: Track download analytics
         trackDownload();
@@ -120,8 +121,8 @@ function trackDownload() {
 
 function handleWatchDemo() {
     console.log('Watch Demo clicked');
-    alert('Demo video coming soon!\nCheck back for a video walkthrough of EasyTrip Planner.');
-    // Example: window.open('https://youtube.com/watch?v=demo', '_blank');
+    // Open YouTube video in new tab
+    window.open('https://youtube.com/shorts/J8Bs5PwzfDM?si=WhLzPH3IXA2QelnA', '_blank');
 }
 
 function handlePlanTrip(destination) {
