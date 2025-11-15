@@ -8,7 +8,7 @@ function renderFeatures() {
         {
             title: 'Trip Planning',
             description: 'Plan comprehensive routes, create detailed itineraries, and organize visits across Cameroon with our intuitive planning tools.',
-            icon: '🗺️',
+            icon: '📍',
             image: 'images/trip-planning.png',
             highlights: ['Smart Planning', 'Local Insights', 'Real-time Updates'],
             imagePosition: 'right'
@@ -16,7 +16,7 @@ function renderFeatures() {
         {
             title: 'Budget-Aware Recommendations',
             description: 'Receive personalized travel suggestions tailored to your budget and preferences, ensuring you get the most value from your trip.',
-            icon: '💰',
+            icon: '$',
             image: 'images/budgetaware.jpg',
             highlights: ['Smart Planning', 'Local Insights', 'Real-time Updates'],
             imagePosition: 'left'
@@ -24,8 +24,8 @@ function renderFeatures() {
         {
             title: 'AI Suggestions',
             description: 'Get smart travel tips, discover hidden gems, and receive AI-powered recommendations based on your interests and travel style.',
-            icon: '🤖',
-            image: 'images/aisuggestions.jpg',
+            icon: '⚡',
+            image: 'images/ai_screen.jpg',
             highlights: ['Smart Planning', 'Local Insights', 'Real-time Updates'],
             imagePosition: 'right'
         }

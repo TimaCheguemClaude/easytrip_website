@@ -17,17 +17,17 @@ function renderLanding() {
             </div>
             <div class="features-preview">
                 <div class="feature-card-preview">
-                    <div class="feature-icon">🗺️</div>
+                    <div class="feature-icon">📍</div>
                     <h3>Smart Trip Planning</h3>
                     <p>Plan routes and itineraries across Cameroon with intelligent suggestions</p>
                 </div>
                 <div class="feature-card-preview">
-                    <div class="feature-icon">💰</div>
+                    <div class="feature-icon">$</div>
                     <h3>Budget Management</h3>
                     <p>Get personalized recommendations based on your budget and preferences</p>
                 </div>
                 <div class="feature-card-preview">
-                    <div class="feature-icon">✨</div>
+                    <div class="feature-icon">⚡</div>
                     <h3>AI Suggestions</h3>
                     <p>Smart travel tips and personalized recommendations powered by AI</p>
                 </div>
